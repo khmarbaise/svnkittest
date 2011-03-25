@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.soebes.devel.svn</groupId>
+  <artifactId>svntest</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <name>SVNKit Test :: CLI</name>
+
+  <properties>
+    <main.class>com.soebes.devel.svn.CLI</main.class>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>net.sf.beezle.maven.plugins</groupId>
+        <artifactId>application</artifactId>
+        <version>1.3.1</version>
+        <configuration>
+          <name>svntest</name>
+          <main>${main.class}</main>
+          <concat>META-INF/DEPENDENCIES</concat>
+          <options>-Dlog4j.folder=$HOME/.application/logs/</options>
+          <overwrite>META-INF/LICENSE,META-INF/NOTICE,META-INF/LICENSE.txt,META-INF/NOTICE.txt,COPYING</overwrite>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.tmatesoft.svnkit</groupId>
+      <artifactId>svnkit</artifactId>
+      <version>1.3.5</version>
+    </dependency>
+  </dependencies>
+
+</project>
