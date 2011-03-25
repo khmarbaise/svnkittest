@@ -4,7 +4,7 @@ SVNKit Test
 Examples project to check the information about password storing etc.
 This is based on the discussion on the SVNKit mailing list:
 
-http://old.nabble.com/Options---SVN-CLI-td30931934.html#a30948835
+[http://old.nabble.com/Options---SVN-CLI-td30931934.html#a30948835](http://old.nabble.com/Options---SVN-CLI-td30931934.html#a30948835)
 
 License
 -------
